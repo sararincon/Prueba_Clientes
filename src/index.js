@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}.`);
 });
-
+//Midleware
 app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
@@ -77,6 +77,7 @@ app.get("/", (request, response) => {
 // Paso 4
 
 app.get("/users", db.getUsers);
+
 app.get("/random", db.createUser);
 
 // app.get("/nuevoUsuario", (req, res) => {
